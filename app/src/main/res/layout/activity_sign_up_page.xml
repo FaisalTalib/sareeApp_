@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginPage">
+
+    <ImageView
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:background="@drawable/photologinsignup"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="التسجيل"
+        android:textSize="40sp"
+        android:textColor="#395185"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/BannerDescribtion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اولا سجل حسابك معنا"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10sp"
+        />
+
+    <EditText
+        android:id="@+id/FirstName"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="ادخل الاسم كاملا"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BannerDescribtion" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:hint="ادخل البريد الالكتروني"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FirstName" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:hint="كلمة المرور"
+        android:inputType="textPassword"
+        android:textAlignment="3"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Email" />
+
+
+    <TextView
+        android:id="@+id/HiddenIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="نسيت كلمة المرور"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#4A90E2"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="438dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#4A90E2"
+        android:text="سجل دخولك"
+        android:onClick="LogIn"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/Password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/NewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="-90dp"
+        android:fontFamily="serif"
+        android:text="لديك حساب مسبقا؟"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@id/Register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/logInFromSignUpPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="160dp"
+        android:fontFamily="serif"
+        android:text="سجل دخولك"
+        android:textAlignment="center"
+        android:textColor="#4A90E2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/Register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+      <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:ignore="missingConstraints"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
